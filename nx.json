@@ -46,6 +46,15 @@
       "implicitDependencies": [
         "ui-test"
       ]
+    },
+    "ui-other": {
+      "tags": []
+    },
+    "ui-other-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "ui-other"
+      ]
     }
   }
 }

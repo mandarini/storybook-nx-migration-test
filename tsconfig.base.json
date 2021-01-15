@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@old-story/ui-test": ["libs/ui-test/src/index.ts"]
+      "@old-story/ui-test": ["libs/ui-test/src/index.ts"],
+      "@old-story/ui-other": ["libs/ui-other/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
