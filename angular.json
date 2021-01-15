@@ -20,9 +20,7 @@
               "apps/test-app/src/favicon.ico",
               "apps/test-app/src/assets"
             ],
-            "styles": [
-              "apps/test-app/src/styles.css"
-            ],
+            "styles": ["apps/test-app/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -83,12 +81,40 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/test-app"
-          ],
+          "outputs": ["coverage/apps/test-app"],
           "options": {
             "jestConfig": "apps/test-app/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "storybook": {
+          "builder": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "port": 4400,
+            "config": {
+              "configFolder": "apps/test-app/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "outputPath": "dist/storybook/test-app",
+            "config": {
+              "configFolder": "apps/test-app/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
           }
         }
       }
@@ -114,9 +140,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/test-app-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/test-app-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -138,9 +162,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/ui-test"
-          ],
+          "outputs": ["coverage/libs/ui-test"],
           "options": {
             "jestConfig": "libs/ui-test/jest.config.js",
             "passWithNoTests": true
