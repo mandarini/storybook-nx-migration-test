@@ -223,6 +223,31 @@
           "options": {}
         }
       }
+    },
+    "ui-other": {
+      "projectType": "library",
+      "root": "libs/ui-other",
+      "sourceRoot": "libs/ui-other/src",
+      "prefix": "old-story",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui-other/src/**/*.ts",
+              "libs/ui-other/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui-other"],
+          "options": {
+            "jestConfig": "libs/ui-other/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

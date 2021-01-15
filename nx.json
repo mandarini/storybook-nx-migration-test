@@ -1,14 +1,9 @@
 {
   "npmScope": "old-story",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -29,23 +24,10 @@
     }
   },
   "projects": {
-    "test-app": {
-      "tags": []
-    },
-    "test-app-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "test-app"
-      ]
-    },
-    "ui-test": {
-      "tags": []
-    },
-    "ui-test-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "ui-test"
-      ]
-    }
+    "test-app": { "tags": [] },
+    "test-app-e2e": { "tags": [], "implicitDependencies": ["test-app"] },
+    "ui-test": { "tags": [] },
+    "ui-test-e2e": { "tags": [], "implicitDependencies": ["ui-test"] },
+    "ui-other": { "tags": [] }
   }
 }
